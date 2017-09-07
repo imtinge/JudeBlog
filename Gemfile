@@ -35,6 +35,10 @@ gem 'jbuilder', '~> 2.5'
 gem 'devise', '~> 4.3'
 gem 'rails_admin', '~> 1.2'
 gem 'ckeditor', '~> 4.2', '>= 4.2.4'
+gem 'carrierwave', '~> 1.1'
+gem 'mini_magick', '~> 4.8'
+gem 'carrierwave-qiniu', '~> 1.1', '>= 1.1.5'
+gem 'qiniu', '~> 6.8', '>= 6.8.1'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
