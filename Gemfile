@@ -37,6 +37,7 @@ gem 'carrierwave', '~> 1.1'
 gem 'mini_magick', '~> 4.8'
 gem 'carrierwave-qiniu', '~> 1.1', '>= 1.1.5'
 gem 'qiniu', '~> 6.8', '>= 6.8.1'
+gem 'figaro', '~> 1.1', '>= 1.1.1'
 
 group :production do
   gem 'pg'

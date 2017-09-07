@@ -1,4 +1,6 @@
 CKEDITOR.editorConfig = (config) ->
+  config.assets_languages = ['en', 'zh-cn']
+
   config.width = '100%'
   config.height = '500'
 
@@ -49,4 +51,5 @@ CKEDITOR.editorConfig = (config) ->
   # ]
   # config.toolbar = 'Pure'
   # config.format_tags = 'p;h5;h6'
+  config.format_tags = 'p;h1;h2;h3;pre';
   return
