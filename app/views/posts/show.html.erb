@@ -1,0 +1,18 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @post.title %>
+</p>
+
+<div>
+  <strong>Content:</strong>
+  <%= sanitize @post.content %>
+</div>
+
+<p>
+  <strong>Category:</strong>
+  <%= @post.category.name %>
+</p>
+
+<%= link_to 'Back', posts_path %>
