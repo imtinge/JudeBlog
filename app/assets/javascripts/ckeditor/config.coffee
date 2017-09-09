@@ -1,10 +1,16 @@
 CKEDITOR.editorConfig = (config) ->
-  config.assets_languages = ['en', 'zh-cn']
+  config.assets_languages = 'en'
+  config.assets_plugins = 'image'
+
+  config.extraPlugins = 'embedsemantic,autoembed,image2'
+  config.image2_alignClasses = [ 'image-align-left', 'image-align-center', 'image-align-right' ]
+  config.image2_disableResizer = true
 
   config.width = '100%'
   config.height = '500'
 
-  config.skin = 'office2013';
+  config.skin = 'office2013'
+
 
   # Filebrowser routes
   # The location of an external file browser, that should be launched when "Browse Server" button is pressed.
@@ -21,6 +27,7 @@ CKEDITOR.editorConfig = (config) ->
   config.filebrowserImageUploadUrl = "/ckeditor/pictures"
   # The location of a script that handles file uploads.
   config.filebrowserUploadUrl = "/ckeditor/attachment_files"
+
   # Rails CSRF token
   config.filebrowserParams = ->
     csrf_token = null
@@ -39,17 +46,80 @@ CKEDITOR.editorConfig = (config) ->
     params[csrf_param] = csrf_token  if csrf_param isnt 'undefined' and csrf_token isnt 'undefined'
     params
 
-  # config.toolbar_Pure = [
-  #   { name: 'document',    items: [ 'Source' ] },
-  #   { name: 'clipboard',   items: [ 'Cut','Copy','Paste','PasteText','PasteFromWord','-','Undo','Redo' ] },
-  #   { name: 'tools',       items: [ 'Maximize', 'ShowBlocks' ] }
-  #   { name: 'basicstyles', items: [ 'Bold','Italic','Underline','Strike','-','RemoveFormat', '-', 'Link','Unlink' ] },
-  #   { name: 'paragraph',   items: [ 'NumberedList','BulletedList','-','Blockquote' ] },
-  #   '/',
-  #   { name: 'insert',      items: [ 'Image', 'Flash', 'Table'] },
-  #   { name: 'styles',      items: [ 'Format' ] }
-  # ]
-  # config.toolbar = 'Pure'
-  # config.format_tags = 'p;h5;h6'
-  config.format_tags = 'p;h1;h2;h3;pre';
+  config.toolbar = [
+    {
+      name: 'clipboard'
+      items: [
+        'Undo'
+        'Redo'
+      ]
+    }
+    {
+      name: 'basicstyles'
+      items: [
+        'Bold'
+        'Italic'
+        'Underline'
+        'Strike'
+        'Subscript'
+        'Superscript'
+      ]
+    }
+    {
+      name: 'paragraph'
+      items: [
+        'NumberedList'
+        'BulletedList'
+        '-'
+        'Outdent'
+        'Indent'
+        '-'
+        'Blockquote'
+        '-'
+        'JustifyLeft'
+        'JustifyCenter'
+        'JustifyRight'
+        'JustifyBlock'
+        '-'
+        'BidiLtr'
+        'BidiRtl'
+        'Language'
+      ]
+    }
+    {
+      name: 'links'
+      items: [
+        'Link'
+        'Unlink'
+        'Anchor'
+      ]
+    }
+    {
+      name: 'insert'
+      items: [
+        'Image'
+        # 'Flash'
+        'EmbedSemantic'
+        'Table'
+      ]
+    }
+    {
+      name: 'styles'
+      items: [
+        'Styles'
+        'Format'
+        'Font'
+        'FontSize'
+      ]
+    }
+    {
+      name: 'colors'
+      items: [
+        'TextColor'
+        'BGColor'
+        '-'
+        'Source'
+      ]
+    }
+  ]
   return

@@ -30,9 +30,13 @@ gem 'jbuilder', '~> 2.5'
 
 # Use Capistrano for deploymentgg
 # gem 'capistrano-rails', group: :development
+gem 'jquery-rails', '~> 4.3', '>= 4.3.1'
 gem 'devise', '~> 4.3'
+gem 'cancancan', '~> 2.0'
+gem 'rolify', '~> 5.1'
 gem 'rails_admin', '~> 1.2'
 gem 'ckeditor', '~> 4.2', '>= 4.2.4'
+gem 'jquery-oembed-rails', '~> 0.2.0'
 gem 'carrierwave', '~> 1.1'
 gem 'mini_magick', '~> 4.8'
 gem 'carrierwave-qiniu', '~> 1.1', '>= 1.1.5'

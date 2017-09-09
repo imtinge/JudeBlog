@@ -9,3 +9,15 @@
 # production:
 #   stripe_api_key: sk_live_EeHnL644i6zo4Iyq4v1KdV9H
 #   stripe_publishable_key: pk_live_9lcthxpSIHbGwmdO941O1XVU
+production: 
+  qiniu_access_key: "dsdfsfsfsdfsdfsdfsdflyePnyZZjrmitQ_x5uqMw97RHUtBjrXblFtsBjY2e"
+  qiniu_secret_key: 'RpfPE0dxyKFB65StVk_6Onsdfsdf90909s0dfsdfsdIzyyB5uWegQ_y7x-xH'
+  qiniu_bucket: "judeblsdfsdfsdfsdfog"
+  qiniu_bucket_domain: "ovwjdc4liesdfsdfsdf9bkt.clouddn.com"
+
+
+development: 
+  qiniu_access_key: "dsdfsfsfsdfsdfsdfsdflyePnyZZjrmitQ_x5uqMw97RHUtBjrXblFtsBjY2e"
+  qiniu_secret_key: 'RpfPE0dxyKFB65StVk_6Onsdfsdf90909s0dfsdfsdIzyyB5uWegQ_y7x-xH'
+  qiniu_bucket: "judeblsdfsdfsdfsdfog"
+  qiniu_bucket_domain: "ovwjdc4liesdfsdfsdf9bkt.clouddn.com"
