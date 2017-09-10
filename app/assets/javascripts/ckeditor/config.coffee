@@ -2,9 +2,12 @@ CKEDITOR.editorConfig = (config) ->
   config.assets_languages = 'en'
   config.assets_plugins = 'image'
 
-  config.extraPlugins = 'embedsemantic,autoembed,image2'
+  config.extraPlugins = 'embedsemantic,autoembed,image2,wysiwygarea,youtube'
   config.image2_alignClasses = [ 'image-align-left', 'image-align-center', 'image-align-right' ]
   config.image2_disableResizer = true
+
+  config.youtube_responsive = true
+  config.youtube_related = false
 
   config.width = '100%'
   config.height = '500'
@@ -99,7 +102,9 @@ CKEDITOR.editorConfig = (config) ->
       items: [
         'Image'
         # 'Flash'
+        'Iframe'
         'EmbedSemantic'
+        'Youtube'
         'Table'
       ]
     }
